@@ -1,5 +1,9 @@
 package com.example.roomdemo
 
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
 class Product {
     var id: Int = 0
     var productName: String = ""
@@ -9,4 +13,19 @@ class Product {
         this.productName = productname
         this.quantity = quantity
     }
+    @Entity(tableName = "products")
+    class Product {
+        @PrimaryKey(autoGenerate = true)
+        @ColumnInfo(name = "productId")
+        var id: Int = 0
+        @ColumnInfo(name = "productName")
+        var productName: String = ""
+        var quantity: Int = 0
+        constructor()
+        constructor(productname: String, quantity: Int) {
+            this.productName = productname
+            this.quantity = quantity
+        }
+    }
 }
+
