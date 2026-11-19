@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.roomdemoromang"
+    namespace = "com.example.roomdemo"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.roomdemoromang"
+        applicationId = "com.example.roomdemo"
         minSdk = 27
         targetSdk = 35
         versionCode = 1
